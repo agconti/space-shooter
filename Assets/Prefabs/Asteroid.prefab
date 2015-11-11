@@ -29,6 +29,7 @@ GameObject:
   - 136: {fileID: 13662710}
   - 114: {fileID: 11423154}
   - 114: {fileID: 11484112}
+  - 114: {fileID: 11446826}
   m_Layer: 0
   m_Name: Asteroid
   m_TagString: Untagged
@@ -120,8 +121,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   asteroidExplosion: {fileID: 100004, guid: 2857e183f4cd3df4e9096e5b578bd32f, type: 2}
   playerExplosion: {fileID: 100008, guid: a93496017806b7740910df5fd946f306, type: 2}
-  gameController: {fileID: 0}
   scoreValue: 10
+--- !u!114 &11446826
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 138964}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1293678c146dc48e297c70fae063cb56, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tumble: 5
 --- !u!114 &11484112
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -165,6 +177,10 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: scoreValue
       value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: tumble
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
