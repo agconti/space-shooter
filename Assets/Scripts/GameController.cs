@@ -9,8 +9,14 @@ public class GameController : MonoBehaviour {
 	[SerializeField] Vector3 spawnValues;
 	[SerializeField] float spawnWait;
 	[SerializeField] float waveWait;
+	[SerializeField] GUIText scoreText;
+
+	int score;
 
 	void Start () {
+		score = 0;
+		UpdateScore ();
+
 		SpawnWaves ();
 		StartCoroutine (SpawnWaves ());
 	}
@@ -29,5 +35,14 @@ public class GameController : MonoBehaviour {
 			} 
 			yield return new WaitForSeconds(waveWait);
 		}
+	}
+
+	public void AddScore (int newScoreValue) {
+		score += newScoreValue;
+		UpdateScore ();
+	}
+
+	void UpdateScore() {
+		scoreText.text = "Score: " + score;
 	}
 }
