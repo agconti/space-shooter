@@ -3,11 +3,11 @@ using System.Collections;
 
 public class Mover : MonoBehaviour {
 	
-	Rigidbody bolt;
-	[SerializeField] float boltSpeed;
+	[SerializeField] float speed;
+	Rigidbody rb;
 	
 	void Start () {
-		bolt = GetComponent<Rigidbody> ();
-		bolt.velocity = transform.forward * boltSpeed;
+		rb = GetComponent<Rigidbody> ();
+		rb.velocity = transform.forward * speed;
 	}
 }
