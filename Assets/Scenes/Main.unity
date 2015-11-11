@@ -275,7 +275,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   asteroid: {fileID: 138964, guid: 0768e7c82bf0e4d8a87c306b10b8aabd, type: 2}
-  spawnValues: {x: 6, y: 0, z: 8}
+  hazardCount: 10
+  startWait: 0
+  spawnValues: {x: 6, y: 0, z: 16}
+  spawnWait: .5
+  waveWait: 4
 --- !u!4 &671539612
 Transform:
   m_ObjectHideFlags: 0
@@ -431,56 +435,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1
---- !u!1001 &1603691908
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 454518, guid: 0768e7c82bf0e4d8a87c306b10b8aabd, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 454518, guid: 0768e7c82bf0e4d8a87c306b10b8aabd, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 454518, guid: 0768e7c82bf0e4d8a87c306b10b8aabd, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 5.5999999
-      objectReference: {fileID: 0}
-    - target: {fileID: 454518, guid: 0768e7c82bf0e4d8a87c306b10b8aabd, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 454518, guid: 0768e7c82bf0e4d8a87c306b10b8aabd, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 454518, guid: 0768e7c82bf0e4d8a87c306b10b8aabd, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 454518, guid: 0768e7c82bf0e4d8a87c306b10b8aabd, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 454518, guid: 0768e7c82bf0e4d8a87c306b10b8aabd, type: 2}
-      propertyPath: m_RootOrder
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 13662710, guid: 0768e7c82bf0e4d8a87c306b10b8aabd, type: 2}
-      propertyPath: m_Height
-      value: 1.62465167
-      objectReference: {fileID: 0}
-    - target: {fileID: 13662710, guid: 0768e7c82bf0e4d8a87c306b10b8aabd, type: 2}
-      propertyPath: m_Radius
-      value: .461659908
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: 0768e7c82bf0e4d8a87c306b10b8aabd, type: 2}
-  m_IsPrefabParent: 0
 --- !u!1 &1657540229
 GameObject:
   m_ObjectHideFlags: 0
@@ -654,7 +608,7 @@ MonoBehaviour:
   tilt: 4
   boltPrefab: {fileID: 114116, guid: fe651ac20d416482bb8930345100d3e3, type: 2}
   shotSpawn: {fileID: 756467160}
-  fireRate: .25
+  fireRate: .0250000004
 --- !u!1 &1863191644
 GameObject:
   m_ObjectHideFlags: 0
