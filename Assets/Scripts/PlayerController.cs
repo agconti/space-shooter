@@ -26,10 +26,13 @@ public class PlayerController : MonoBehaviour {
 	float moveVertical;
 	GameObject bolt;
 	float nextFire = 0.0f;
+	AudioSource fireSound; 
 
 	
 	void Awake () {
 		ship = GetComponent<Rigidbody> ();
+		fireSound = GetComponent<AudioSource> ();
+
 	}
 
 	void Update () {
@@ -37,6 +40,7 @@ public class PlayerController : MonoBehaviour {
 		if(Input.GetButtonDown("Fire1") && Time.time > nextFire){
 			nextFire = Time.time + fireRate; 
 			bolt = Instantiate (boltPrefab, shotSpawn.position, shotSpawn.rotation) as GameObject;
+			fireSound.Play ();
 		}
 	}
 
