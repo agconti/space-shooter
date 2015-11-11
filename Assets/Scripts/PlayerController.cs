@@ -18,13 +18,14 @@ public class PlayerController : MonoBehaviour {
     [SerializeField] float tilt;
 	[SerializeField] GameObject boltPrefab;
 	[SerializeField] Transform shotSpawn;
-
+	[SerializeField] float fireRate;
 
 	Rigidbody ship;
 	Transform shipEnd;
 	float moveHorizontal;
 	float moveVertical;
-	GameObject shot;
+	GameObject bolt;
+	float nextFire = 0.0f;
 
 	
 	void Awake () {
@@ -32,13 +33,12 @@ public class PlayerController : MonoBehaviour {
 	}
 
 	void Update () {
-		if(Input.GetButtonDown("Fire1")){
-			GameObject bolt = Instantiate (boltPrefab, shotSpawn.position, shotSpawn.rotation) as GameObject;
-		}
-	}
 
-	void RemoveBolt () {
-		Invoke
+		if(Input.GetButtonDown("Fire1") && Time.time > nextFire){
+			nextFire = Time.time + fireRate; 
+			bolt = Instantiate (boltPrefab, shotSpawn.position, shotSpawn.rotation) as GameObject;
+		}
+
 	}
 
 	void FixedUpdate () {

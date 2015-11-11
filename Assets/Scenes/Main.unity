@@ -557,8 +557,9 @@ MonoBehaviour:
     zMax: 8
   shipSpeed: 10
   tilt: 4
-  boltPrefab: {fileID: 5492690, guid: fe651ac20d416482bb8930345100d3e3, type: 2}
+  boltPrefab: {fileID: 114116, guid: fe651ac20d416482bb8930345100d3e3, type: 2}
   shotSpawn: {fileID: 756467160}
+  fireRate: .25
 --- !u!1 &1863191644
 GameObject:
   m_ObjectHideFlags: 0
