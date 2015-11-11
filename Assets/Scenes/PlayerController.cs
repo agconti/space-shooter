@@ -12,17 +12,33 @@ public class Boundary {
 }
 
 public class PlayerController : MonoBehaviour {
-	
-	Rigidbody ship;
+
 	[SerializeField] Boundary boundary;
 	[SerializeField] float shipSpeed;
-	[SerializeField] float tilt;
+    [SerializeField] float tilt;
+	[SerializeField] GameObject boltPrefab;
+	[SerializeField] Transform shotSpawn;
+
+
+	Rigidbody ship;
+	Transform shipEnd;
 	float moveHorizontal;
 	float moveVertical;
+	GameObject shot;
 
 	
 	void Awake () {
 		ship = GetComponent<Rigidbody> ();
+	}
+
+	void Update () {
+		if(Input.GetButtonDown("Fire1")){
+			GameObject bolt = Instantiate (boltPrefab, shotSpawn.position, shotSpawn.rotation) as GameObject;
+		}
+	}
+
+	void RemoveBolt () {
+		Invoke
 	}
 
 	void FixedUpdate () {
