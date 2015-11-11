@@ -38,7 +38,6 @@ public class PlayerController : MonoBehaviour {
 			nextFire = Time.time + fireRate; 
 			bolt = Instantiate (boltPrefab, shotSpawn.position, shotSpawn.rotation) as GameObject;
 		}
-
 	}
 
 	void FixedUpdate () {
